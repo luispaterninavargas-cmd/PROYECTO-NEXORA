@@ -1,0 +1,14 @@
+{
+  "name": "microservicios-ecommerce",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n USUARIOS,PRODUCTOS,VENTAS,RECOMENDACIONES,GATEWAY,FRONTEND \"npm --prefix user_login run dev\" \"npm --prefix CrudProduct run dev\" \"npm --prefix \\\"sales microservice\\\" run dev\" \"npm --prefix recommendation-service run dev\" \"npm --prefix api-gatewai run dev\" \"npm --prefix frontend-microservicios run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.7.3"
+  }
+}
